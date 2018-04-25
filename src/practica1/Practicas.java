@@ -1,6 +1,6 @@
 
 package practica1;
-
+//Practica de Arreglos bidimencionales
 
 public class Practicas {
 
