@@ -30,4 +30,23 @@ public class usoEmpleado {
     
     
 }
+//HERENCIA
+class Jefatura extends Empleado{//Heredamos de la clase padre (Empleado) con la palabra reservada Extends
+    private double incentivo;
+    public Jefatura(String nom, double sue, int agno, int mes, int dia){//Recibimos parametros
+    super(nom, sue, agno,mes,dia); //Con super hacemos referencia al constructor del padre, al cual se enviamos los parametros
+}
+    
+    public void establecerIncentivo(double x){//metodo Setter
+        incentivo=x;
+    }
+    
+    //sobreescribimos el metodo de la clase padre
+    //se olvida del metodo de la clase padre para esta clase y toma por predeterminado este
+    public double obtenerSueldo(){
+        double sueldo= incentivo+super.obtenerSueldo();//llamamos al metodo obtner sueldo de la clase padre
+        return sueldo;
+    }
+}
+
 
