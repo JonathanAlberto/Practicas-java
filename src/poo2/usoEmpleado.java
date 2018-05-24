@@ -22,8 +22,13 @@ public class usoEmpleado {
      empleado[5]=new Jefatura ("Susan", 10000,2012,01,07);
      //la clase que hereda toma las variables objeto del padre como si fueran suyas
      //En eso consiste el polimorfismo
-
      
+     /*si queremos llamar metodos de jefatura no podemos porq no pertenecen a empleado por ejemplo
+     empleado[5].establecerIncentivo(5000);
+     para esto debemos de hacer un casteo de objetos como se muestra abajo*/
+     Jefatura jefa_finanzas=(Jefatura) empleado[5];  //Casting de un objeto a otro siempre y cuando sea un jefe
+     jefa_finanzas.establecerIncentivo(5000);  //ahora si se puede llamar al metodo
+      
      for(Empleado e: empleado){
          e.SubeSueldo(5);
      }
